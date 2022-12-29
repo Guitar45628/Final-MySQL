@@ -2,6 +2,8 @@ var $table = $('#fresh-table')
 var $alertBtn = $('#alertBtn')
 var $createBtn = $('#createBtn')
 
+
+
 window.operateEvents = {
     'click .like': function (e, value, row, index) {
         alert('You click like icon, row: ' + JSON.stringify(row))
@@ -14,30 +16,30 @@ window.operateEvents = {
             title: "Data Updater",
             html:
                 '<div class="align-left" >' +
-                '<input class="form-control" id="Student_ID" placeholder="Student_ID" value="' + row.Student_ID + '"></div>' +
-                '<div class="mb-3"><label for="First_Name" class="form-label">First_Name</label>' +
-                '<input class="form-control" id="First_Name" placeholder="First_Name" value="' + row.First_Name + '"></div>' +
+                '<input readonly class="form-control" id="edit_studentID" placeholder="Student_ID" value="' + row.Student_ID + '"></div>' +
+                '<div class="mb-3"><label for="edit_firstname" class="form-label">First_Name</label>' +
+                '<input class="form-control" id="edit_firstname" placeholder="First_Name" value="' + row.First_Name + '"></div>' +
 
-                '<div class="mb-3"><label for="Last_Name" class="form-label">Last_Name</label>' +
-                '<input class="form-control" id="Last_Name" placeholder="Last_Name" value="' + row.Last_Name + '"></div>' +
+                '<div class="mb-3"><label for="edit_lastname" class="form-label">Last_Name</label>' +
+                '<input class="form-control" id="edit_lastname" placeholder="Last_Name" value="' + row.Last_Name + '"></div>' +
 
-                '<div class="mb-3"><label for="Username" class="form-label">Username</label>' +
-                '<input class="form-control" id="Username" placeholder="Username" value="' + row.Username + '"></div>' +
+                '<div class="mb-3"><label for="edit_username" class="form-label">Username</label>' +
+                '<input class="form-control" id="edit_username" placeholder="Username" value="' + row.Username + '"></div>' +
 
-                '<div class="mb-3"><label for="Major" class="form-label">Major</label>' +
-                '<input class="form-control" id="Major" placeholder="Major" value="' + row.Major + '"></div>' +
+                '<div class="mb-3"><label for="edit_major" class="form-label">Major</label>' +
+                '<input class="form-control" id="edit_major" placeholder="Major" value="' + row.Major + '"></div>' +
 
-                '<div class="mb-3"><label for="Ability" class="form-label">Ability</label>' +
-                '<input class="form-control" id="Ability" placeholder="Ability" value="' + row.Ability + '"></div>' +
+                '<div class="mb-3"><label for="edit_ability" class="form-label">Ability</label>' +
+                '<input class="form-control" id="edit_ability" placeholder="Ability" value="' + row.Ability + '"></div>' +
 
-                '<div class="mb-3"><label for="Kingdom" class="form-label">Kingdom</label>' +
-                '<input class="form-control" id="Kingdom" placeholder="Kingdom" value="' + row.Kingdom + '"></div>' +
+                '<div class="mb-3"><label for="edit_kingdom" class="form-label">Kingdom</label>' +
+                '<input class="form-control" id="edit_kingdom" placeholder="Kingdom" value="' + row.Kingdom + '"></div>' +
 
-                '<div class="mb-3"><label for="Phone_Number" class="form-label">Phone_Number</label>' +
-                '<input class="form-control" id="Phone_Number" placeholder="Phone_Number" value="' + row.Phone_Number + '"></div>' +
+                '<div class="mb-3"><label for="edit_phonenumber" class="form-label">Phone_Number</label>' +
+                '<input class="form-control" id="edit_phonenumber" placeholder="Phone_Number" value="' + row.Phone_Number + '"></div>' +
 
-                '<div class="mb-3"><label for="Grade" class="form-label">Grade</label>' +
-                '<input class="form-control" id="Grade" placeholder="Grade" value="' + row.Grade + '"></div>' +
+                '<div class="mb-3"><label for="edit_grade" class="form-label">Grade</label>' +
+                '<input class="form-control" id="edit_grade" placeholder="Grade" value="' + row.Grade + '"></div>' +
                 '</div>',
 
             focusConfirm: false,
@@ -129,38 +131,39 @@ $(function () {
     $alertBtn.click(function () {
         alert('You pressed on Alert')
     })
+
     $createBtn.click(function () {
         Swal.fire({
             title: "Data Creator",
             html:
                 '<div class="align-left" >' +
 
-                '<div class="mb-3"><label for="Student_ID" class="form-label">Student_ID</label>' +
-                '<input class="form-control" id="Student_ID" placeholder="Student_ID"></div>' +
+                '<div class="mb-3"><label for="new_studentID" class="form-label">Student_ID</label>' +
+                '<input class="form-control" id="new_studentID" placeholder="Student_ID"></div>' +
 
-                '<div class="mb-3"><label for="First_Name" class="form-label">First_Name</label>' +
-                '<input class="form-control" id="First_Name" placeholder="First_Name"></div>' +
+                '<div class="mb-3"><label for="new_firstname" class="form-label">First_Name</label>' +
+                '<input class="form-control" id="new_firstname" placeholder="First_Name"></div>' +
 
-                '<div class="mb-3"><label for="Last_Name" class="form-label">Last_Name</label>' +
-                '<input class="form-control" id="Last_Name" placeholder="Last_Name"></div>' +
+                '<div class="mb-3"><label for="new_lastname" class="form-label">Last_Name</label>' +
+                '<input class="form-control" id="new_lastname" placeholder="Last_Name"></div>' +
 
-                '<div class="mb-3"><label for="Username" class="form-label">Username</label>' +
-                '<input class="form-control" id="Username" placeholder="Username"></div>' +
+                '<div class="mb-3"><label for="new_username" class="form-label">Username</label>' +
+                '<input class="form-control" id="new_username" placeholder="Username"></div>' +
 
-                '<div class="mb-3"><label for="Major" class="form-label">Major</label>' +
-                '<input class="form-control" id="Major" placeholder="Major"></div>' +
+                '<div class="mb-3"><label for="new_major" class="form-label">Major</label>' +
+                '<input class="form-control" id="new_major" placeholder="Major"></div>' +
 
-                '<div class="mb-3"><label for="Ability" class="form-label">Ability</label>' +
-                '<input class="form-control" id="Ability" placeholder="Ability"></div>' +
+                '<div class="mb-3"><label for="new_ability" class="form-label">Ability</label>' +
+                '<input class="form-control" id="new_ability" placeholder="Ability"></div>' +
 
-                '<div class="mb-3"><label for="Kingdom" class="form-label">Kingdom</label>' +
-                '<input class="form-control" id="Kingdom" placeholder="Kingdom"></div>' +
+                '<div class="mb-3"><label for="new_kingdom" class="form-label">Kingdom</label>' +
+                '<input class="form-control" id="new_kingdom" placeholder="Kingdom"></div>' +
 
-                '<div class="mb-3"><label for="Phone_Number" class="form-label">Phone_Number</label>' +
-                '<input class="form-control" id="Phone_Number" placeholder="Phone_Number"></div>' +
+                '<div class="mb-3"><label for="new_phonenumber" class="form-label">Phone_Number</label>' +
+                '<input class="form-control" id="new_phonenumber" placeholder="Phone_Number"></div>' +
 
-                '<div class="mb-3"><label for="Grade" class="form-label">Grade</label>' +
-                '<input class="form-control" id="Grade" placeholder="Grade"></div>' +
+                '<div class="mb-3"><label for="new_grade" class="form-label">Grade</label>' +
+                '<input class="form-control" id="new_grade" placeholder="Grade"></div>' +
                 '</div>',
 
             focusConfirm: false,
@@ -174,55 +177,36 @@ $(function () {
 /* ฟังก์ชันสร้าง */
 function CreateMyPrince() {
     $save = true;
-    if ($('#Student_ID').val().length == 0) {
-        //alert("กรุณากรอกชื่อผู้ใช้งาน");
-        $('#Student_ID').focus();
+    if ($('#new_studentID').val().length == 0) {
         $save = false;
-    } else if ($('#First_Name').val().length == 0) {
-        //alert("กรุณากรอกชื่อผู้ใช้งาน");
-        $('#First_Name').focus();
+    } else if ($('#new_firstname').val().length == 0) {
         $save = false;
-    } else if ($('#Last_Name').val().length == 0) {
-        //alert("กรุณากรอกรหัสผ่าน");
-        $('#Last_Name').focus();
+    } else if ($('#new_lastname').val().length == 0) {
         $save = false;
-    } else if ($('#Username').val().length == 0) {
-        //alert("กรุณากรอกชื่อ");
-        $('#Username').focus();
+    } else if ($('#new_username').val().length == 0) {
         $save = false;
-    } else if ($('#Major').val().length == 0) {
-        //alert("กรุณากรอกนามสกุล");
-        $('#Major').focus();
+    } else if ($('#new_major').val().length == 0) {
         $save = false;
-    }
-    else if ($('#Ability').val().length == 0) {
-        //alert("กรุณากรอกนามสกุล");
-        $('#Ability').focus();
+    } else if ($('#new_ability').val().length == 0) {
         $save = false;
-    } else if ($('#Kingdom').val().length == 0) {
-        //alert("กรุณากรอกนามสกุล");
-        $('#Kingdom').focus();
+    } else if ($('#new_kingdom').val().length == 0) {
         $save = false;
-    } else if ($('#Phone_Number').val().length == 0) {
-        //alert("กรุณากรอกนามสกุล");
-        $('#Phone_Number').focus();
+    } else if ($('#new_phonenumber').val().length == 0) {
         $save = false;
-    } else if ($('#Grade').val().length == 0) {
-        //alert("กรุณากรอกนามสกุล");
-        $('#Grade').focus();
+    } else if ($('#new_grade').val().length == 0) {
         $save = false;
     }
     if ($save) {
         let userdata = {
-            "Student_ID": $("#Student_ID").val(),
-            "First_Name": $("#First_Name").val(),
-            "Last_Name": $("#Last_Name").val(),
-            "Username": $("#Username").val(),
-            "Major": $("#Major").val(),
-            "Ability": $("#Ability").val(),
-            "Kingdom": $("#Kingdom").val(),
-            "Phone_Number": $("#Phone_Number").val(),
-            "Grade": $("#Grade").val(),
+            "Student_ID": $("#new_studentID").val(),
+            "First_Name": $("#new_firstname").val(),
+            "Last_Name": $("#new_lastname").val(),
+            "Username": $("#new_username").val(),
+            "Major": $("#new_major").val(),
+            "Ability": $("#new_ability").val(),
+            "Kingdom": $("#new_kingdom").val(),
+            "Phone_Number": $("#new_phonenumber").val(),
+            "Grade": $("#new_grade").val(),
         }
         $.ajax({
             method: "POST",
@@ -245,6 +229,10 @@ function CreateMyPrince() {
             }
             $('#table').bootstrapTable()
         });
+        location.reload();
+    }
+    else {
+        alertMSG()
     }
 }
 
@@ -268,58 +256,40 @@ function deleteUser(id) {
                 text: 'Something went wrong!'
             })
         }
-        //getUserData();
+        location.reload()
     });
 }
 /*Update*/
 function dataUpdate(id) {
     $save = true;
-    if ($('#First_Name').val().length == 0) {
-        //alert("กรุณากรอกชื่อผู้ใช้งาน");
-        $('#First_Name').focus();
+    if ($('#edit_studentID').val().length == 0) {
         $save = false;
-    } else if ($('#Last_Name').val().length == 0) {
-        //alert("กรุณากรอกรหัสผ่าน");
-        $('#Last_Name').focus();
+    } else if ($('#edit_firstname').val().length == 0) {
         $save = false;
-    } else if ($('#Username').val().length == 0) {
-        //alert("กรุณากรอกชื่อ");
-        $('#Username').focus();
+    } else if ($('#edit_lastname').val().length == 0) {
         $save = false;
-    } else if ($('#Major').val().length == 0) {
-        //alert("กรุณากรอกนามสกุล");
-        $('#Major').focus();
+    } else if ($('#edit_major').val().length == 0) {
         $save = false;
-    }
-    else if ($('#Ability').val().length == 0) {
-        //alert("กรุณากรอกนามสกุล");
-        $('#Ability').focus();
+    } else if ($('#edit_ability').val().length == 0) {
         $save = false;
-    } else if ($('#Kingdom').val().length == 0) {
-        //alert("กรุณากรอกนามสกุล");
-        $('#Kingdom').focus();
+    } else if ($('#edit_kingdom').val().length == 0) {
         $save = false;
-    } else if ($('#Phone_Number').val().length == 0) {
-        //alert("กรุณากรอกนามสกุล");
-        $('#Phone_Number').focus();
+    } else if ($('#edit_phonenumber').val().length == 0) {
         $save = false;
-    } else if ($('#Grade').val().length == 0) {
-        //alert("กรุณากรอกนามสกุล");
-        $('#Grade').focus();
+    } else if ($('#edit_grade').val().length == 0) {
         $save = false;
     }
     if ($save) {
-
         let userdata = {
-            "Student_ID": $("#Student_ID").val(),
-            "First_Name": $("#First_Name").val(),
-            "Last_Name": $("#Last_Name").val(),
-            "Username": $("#Username").val(),
-            "Major": $("#Major").val(),
-            "Ability": $("#Ability").val(),
-            "Kingdom": $("#Kingdom").val(),
-            "Phone_Number": $("#Phone_Number").val(),
-            "Grade": $("#Grade").val(),
+            "Student_ID": $("#edit_studentID").val(),
+            "First_Name": $("#edit_firstname").val(),
+            "Last_Name": $("#edit_lastname").val(),
+            "Username": $("#edit_username").val(),
+            "Major": $("#edit_major").val(),
+            "Ability": $("#edit_ability").val(),
+            "Kingdom": $("#edit_kingdom").val(),
+            "Phone_Number": $("#edit_phonenumber").val(),
+            "Grade": $("#edit_grade").val(),
         }
         $.ajax({
             method: "PUT",
@@ -340,8 +310,10 @@ function dataUpdate(id) {
                     text: 'Something went wrong!'
                 })
             }
-            //getUserData();
         });
+        location.reload()
+    } else {
+        alertMSG()
     }
 }
 
@@ -355,7 +327,7 @@ function showProfile() {
             '<div class="col-sm-4 bg-c-lite-green user-profile">' +
             '<div class="card-block text-center text-white">' +
             '<div class="m-b-25">' +
-            '<img src="https://scontent.fbkk10-1.fna.fbcdn.net/v/t39.30808-6/295079178_3252839608321332_3651102686238272090_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFZ5x3lcGsx_ENNJfJ23rP0vjHUEOm-lci-MdQQ6b6VyKDNhDIre6Xgg58_Y_6iFM0KjcxujUoso6CcWyrnIcGL&_nc_ohc=yZkKMq274pwAX_Jif9M&_nc_oc=AQkptrqQQ2j60bP2ZodTGnluqbRVmaP72wM4HL3IknMf_X19S-M4X58cOhaU0ou4yE8&_nc_ht=scontent.fbkk10-1.fna&oh=00_AfALUFjEzQy05VapGwjDlCSZFw0U43oqa65-741nXQQKfg&oe=63AD5C08" class="img-radius" alt="User-Profile-Image">' +
+            '<img class="img-radius" src="/assets/img/propic.jpg">' +
             '</div>' +
             '<h6 class="f-w-600" style="color:white;">Dechnarong Matham</h6>' +
             '<p style="color:white;">Guitar</p>' +
@@ -366,18 +338,26 @@ function showProfile() {
             '<div class="card-block">' +
             '<h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>' +
             '<div class="row"  style="text-align:left;">' +
-            '<div style="form-control">'+
+            '<div style="form-control">' +
 
-                '<h6 class="m-b-10 f-w-600">Student ID</h6>' +
-                '<h6 class="text-muted f-w-400" style="background-color:#ededed;">64105075</h6>' +
+            '<h6 class="m-b-10 f-w-600">Student ID</h6>' +
+            '<h6 class="text-muted f-w-400">64105075</h6>' +
 
-                '<h6 class="m-b-10 f-w-600">Email</h6>' +
-                '<h6 class="text-muted f-w-400" style="background-color:#ededed;">dechnarong.ma@mail.wu.ac.th</h6>' +
+            '<h6 class="m-b-10 f-w-600">Email</h6>' +
+            '<h6 class="text-muted f-w-400">dechnarong.ma@mail.wu.ac.th</h6>' +
 
-                '<h6 class="m-b-10 f-w-600">Phone Number</h6>' +
-                '<h6 class="text-muted f-w-400" style="background-color:#ededed;">0986745429</h6>' +
-            '</div>'+
+            '<h6 class="m-b-10 f-w-600">Phone Number</h6>' +
+            '<h6 class="text-muted f-w-400">0986745429</h6>' +
+            '</div>' +
             '</div>' +
             '</div></div></div></div>'
     })
+}
+
+function alertMSG() {
+    Swal.fire({
+        icon:'error',
+        title:'กรุณากรอกข้อมูลให้ครบและลองใหม่อีกครั้ง'
+    }
+      )
 }

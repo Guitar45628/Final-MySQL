@@ -67,8 +67,8 @@ app.post('/getUserByID', (req, res) => {
 app.post('/checkUsername', (req, res) => {
     let object = req.body;
     db.query(
-        'SELECT * FROM users WHERE username = ?',
-        [object.username],
+        'SELECT * FROM studentlists WHERE Username = ?',
+        [object.Username],
         function (err, results) {
             if (err)
                 console.log(err);

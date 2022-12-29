@@ -46,7 +46,7 @@
 
 .img-radius {
     border-radius: 20px;
-    width: 90px;
+    width: 100px;
 }
 
 h6 {
@@ -89,6 +89,10 @@ p {
 
 .text-muted {
     color: #919aa3 !important;
+    background-color:#ededed;
+    margin-right: 20px;
+    padding: 5px;
+    border-radius: 8px;
 }
 
 .b-b-default {
